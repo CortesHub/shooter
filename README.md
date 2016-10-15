@@ -1,2 +1,2 @@
 # shooter
-Bullet hell game workinprogress
+Bullet hell game WIP
