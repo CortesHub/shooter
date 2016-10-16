@@ -14,7 +14,7 @@ module.exports = {
 
   // sortie du bundle
   output: {
-    path: path.resolve(__dirname, './public/dist/js'),
+    path: path.resolve(__dirname, './public/dist/js/'),
     filename: 'app.bundle.js',
     // if --hot server
     publicPath: '/js/'
