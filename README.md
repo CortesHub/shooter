@@ -8,5 +8,7 @@ Bullet hell game WIP
   > npm install
   ---
 
-  > webpack-dev-server --hot --inline --content-base ./public
+  > server : webpack-dev-server --hot --inline --progress --colors --content-base ./
+
+  > http://localhost:8080/webpack-dev-server/
   ---

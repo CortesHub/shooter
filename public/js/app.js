@@ -1,16 +1,10 @@
-// Libs
-require('./_libs/requestAnimationFrame.js');
 
-// Class
-require('./Class/Event.js');
-require('./Class/Player.js');
-require('./Class/Event.js');
-
-// Game
-require('./Game.js');
-
-// Start
-init();
-animate();
-
-console.log(phrase);
+// test url img
+let c = document.getElementById("gameCanvas");
+let ctx = c.getContext("2d");
+let img = new Image(256,256);
+img.onload = function () {
+   alert("image is loaded");
+   ctx.drawImage(img, 0, 0);
+}
+img.setAttribute('src', '../public/assets/SeamlessGrass.png');

@@ -1,9 +1,7 @@
-let phrase = 'It works';
- 
 /**************************************************
 ** GAME VARIABLES
 **************************************************/
-var canvas,			// Canvas DOM element
+let canvas,			// Canvas DOM element
   ctx,			// Canvas rendering context
   keys,			// Keyboard input
 	localPlayer,	// Local player
@@ -28,26 +26,17 @@ function init() {
 	// Calculate a random start position for the local player
 	// The minus 5 (half a player size) stops the player being
 	// placed right on the egde of the screen
-	var startX = Math.round(Math.random()*(canvas.width-5)),
+	let startX = Math.round(Math.random()*(canvas.width-5)),
 		startY = Math.round(Math.random()*(canvas.height-5));
 
 	// Initialise the local player
 	localPlayer = new Player(startX, startY);
 
+  // Initialise remote players array
+  remotePlayers = [];
+
 	// Start listening for events
 	setEventHandlers();
-};
-
-
-/**************************************************
-** GAME ANIMATION LOOP
-**************************************************/
-function animate() {
-	update();
-	draw();
-
-	// Request a new animation frame using Paul Irish's shim
-	window.requestAnimFrame(animate);
 };
 
 
@@ -71,8 +60,17 @@ function draw() {
 	localPlayer.draw(ctx);
 
 	// Draw the remote players
-	var i;
-	for (i = 0; i < remotePlayers.length; i++) {
+	for (let i = 0; i < remotePlayers.length; i++) {
 		remotePlayers[i].draw(ctx);
 	};
+};
+
+
+/**************************************************
+** GAME ANIMATION LOOP
+**************************************************/
+function animate() {
+	update();
+	draw();
+	window.requestAnimFrame(animate);
 };

@@ -1,11 +1,10 @@
 var path = require('path');
 var root = path.resolve(__dirname);
 
-var webpack = require('webpack');
+//var webpack = require('webpack');
 
 
 module.exports = {
-
 
   // entrée des fichiers
   entry: {
@@ -14,10 +13,10 @@ module.exports = {
 
   // sortie du bundle
   output: {
-    path: path.resolve(__dirname, './public/dist/js/'),
-    filename: 'app.bundle.js',
+    path: path.resolve(__dirname, '/dist/js'),
+    filename: 'bundle.js',
     // if --hot server
-    publicPath: '/js/'
+    publicPath: '/dist/js/'
   },
 
 
@@ -42,7 +41,8 @@ module.exports = {
   ]
 
 
-  // server ($ webpack-dev-server --hot --inline --content-base ./public)
+  // server : webpack-dev-server --hot --inline --progress --colors --content-base ./
+  // http://localhost:8080/webpack-dev-server/
   // 26:10
 
 
