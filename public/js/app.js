@@ -1,6 +1,17 @@
-import { character } from '../js/game.js';
+import { character } from '../js/game';
+import { Player } from '../js/class/player';
 
-console.log(character);
+
+const option = {
+  x: 0,
+  y: 0,
+  id: Math.random(),
+  moveAmount: 1
+}
+let choupi = new Player(option);
+
+console.log(choupi);
+
 
 // test url img
 let c = document.getElementById("gameCanvas");
