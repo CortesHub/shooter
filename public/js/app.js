@@ -1,3 +1,6 @@
+import { character } from '../js/game.js';
+
+console.log(character);
 
 // test url img
 let c = document.getElementById("gameCanvas");

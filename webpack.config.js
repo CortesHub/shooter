@@ -41,9 +41,7 @@ module.exports = {
   ]
 
 
-  // server : webpack-dev-server --hot --inline --progress --colors --content-base ./
-  // http://localhost:8080/webpack-dev-server/
-  // 26:10
-
+  // webpack-dev-server --hot --inline --progress --colors --content-base ./
+  // http://localhost:8080
 
 }
