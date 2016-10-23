@@ -1,24 +1,24 @@
-import { character } from '../js/game';
+/**************************************************
+** GAME IMPORT
+**************************************************/
+// CLASS
+import { playerById } from '../js/game/helperFunction';
+import { Keys } from '../js/class/keys';
 import { Player } from '../js/class/player';
+import { setEventHandlers, onKeydown, onKeyup, onResize, onNewPlayer, onMovePlayer } from '../js/class/events';
 
+// GAME
+import { canvas, ctx, keys,	localPlayer, remotePlayers } from '../js/game/game';
+import { init, update, draw, animate } from '../js/game/game';
 
-const option = {
-  x: 0,
-  y: 0,
-  id: Math.random(),
-  moveAmount: 1
-}
-let choupi = new Player(option);
+/**************************************************
+** INIT
+**************************************************/
+init();
+animate();
 
-console.log(choupi);
+// Player test
+console.log(localPlayer);
 
-
-// test url img
-let c = document.getElementById("gameCanvas");
-let ctx = c.getContext("2d");
-let img = new Image(256,256);
-img.onload = function () {
-   alert("image is loaded");
-   ctx.drawImage(img, 0, 0);
-}
-img.setAttribute('src', '../public/assets/SeamlessGrass.png');
+// Keys test
+console.log(keys);

@@ -1,7 +1,7 @@
 /**************************************************
 ** GAME EVENT HANDLERS
 **************************************************/
-var setEventHandlers = function() {
+let setEventHandlers = function() {
 	// Keyboard
 	window.addEventListener("keydown", onKeydown, false);
 	window.addEventListener("keyup", onKeyup, false);
@@ -56,3 +56,9 @@ function onMovePlayer(data) {
 	movePlayer.setX(data.x);
 	movePlayer.setY(data.y);
 };
+
+
+/**************************************************
+** EXPORT
+**************************************************/
+export { setEventHandlers, onKeydown, onKeyup, onResize, onNewPlayer, onMovePlayer }
